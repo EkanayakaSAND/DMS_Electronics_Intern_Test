@@ -17,8 +17,8 @@ const app = express();
 app.use(cors(
   {
     origin: "*",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
+    methods: ["GET", "POST"],
+    credentials: true, 
   }
 ));
 app.use(express.json());
@@ -26,6 +26,9 @@ app.use(morgan("dev"));
 dbConnection();
 
 // ----------------------------- Routes -------------------------------
+app.get('/', (req, res) => {
+  res.json("Backend working...")
+})
 app.use("/api/authentication", authRoutes);
 app.use("/api/algorithms", algorithmRoutes);
 
