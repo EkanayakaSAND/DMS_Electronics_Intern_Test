@@ -5,7 +5,7 @@ const DecryptForm = () => {
   const [decryptedText, setDecryptedText] = useState("");
   const [error, setError] = useState("");
 
-  const baseURL = "http://localhost:4000";
+  const baseURL = "https://dms-electronics-api.vercel.app";
 
   const handleDecrypt = async () => {
     try {

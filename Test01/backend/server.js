@@ -27,9 +27,6 @@ app.use(morgan("dev"));
 dbConnection();
 
 // ----------------------------- Routes -------------------------------
-app.get('/', (req, res) => {
-  res.json("Backend working...")
-})
 app.use("/api/authentication", authRoutes);
 app.use("/api/algorithms", algorithmRoutes);
 

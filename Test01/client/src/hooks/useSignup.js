@@ -11,7 +11,7 @@ const useSignup = () => {
     setError(null);
     setIsLoading(true);
     const response = await fetch(
-      "http://localhost:4000/api/authentication/signup",
+      "https://dms-electronics-api.vercel.app/api/authentication/signup",
       {
         method: "post",
         headers: { "Content-Type": "application/json" },
