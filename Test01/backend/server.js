@@ -14,13 +14,21 @@ const app = express();
 
 // --------------------------- Middleware -----------------------------
 
-app.use(cors(
-  {
-    origin: "*",
-    methods: ["GET", "POST"],
-    credentials: true, 
-  }
-));
+// app.use(cors(
+//   {
+//     origin: "*",
+//     methods: ["GET", "POST"],
+//     credentials: true, 
+//   }
+// ));
+
+// Enable CORS for specific origin
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://dms-electronics-client.vercel.app');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  next();
+});
 
 app.use(express.json());
 app.use(morgan("dev"));
