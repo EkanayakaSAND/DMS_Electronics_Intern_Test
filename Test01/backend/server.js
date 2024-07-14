@@ -16,7 +16,7 @@ const app = express();
 
 // app.use(cors(
 //   {
-//     origin: "*",
+//     origin: "https://dms-electronics-client.vercel.app",
 //     methods: ["GET", "POST"],
 //     credentials: true, 
 //   }
