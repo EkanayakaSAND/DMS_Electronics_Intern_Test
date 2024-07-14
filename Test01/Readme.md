@@ -35,8 +35,8 @@ The project involves developing a web application using the MERN stack (MongoDB,
 
 ## Installation
 
-1. Clone the repository: `git clone <repository-url>`
-2. Navigate into the directory: `cd <project-name>`
+1. Clone the repository
+2. Navigate into the directory
 3. Install dependencies:
 
 ```
